@@ -1,5 +1,5 @@
-# Rocket.Chat [![Cookbook
-Version](https://img.shields.io/cookbook/v/rocketchat.svg)](https://supermarket.chef.io/cookbooks/rocketchat)
+# Rocket.Chat
+[![Cookbook[Version](https://img.shields.io/cookbook/v/rocketchat.svg)](https://supermarket.chef.io/cookbooks/rocketchat)
 
 ## Description
 
