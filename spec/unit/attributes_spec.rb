@@ -19,7 +19,7 @@ describe 'rocketchat::default' do
     end
 
     it 'has a url' do
-      expect(sdtd['url']).to match(/https:.+(latest\/download)/)
+      expect(sdtd['url']).to match(%r{https:.+(latest/download)})
     end
 
     it 'has contains a valid checksum' do
