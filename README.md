@@ -4,7 +4,9 @@
 
 ## Description
 
-Installs and configures a [Rocket.Chat](https://rocket.chat/) server.
+Installs and configures a [Rocket.Chat](https://rocket.chat/) server. This is
+intended only to install the Rocket.Chat server. You'll want to use a wrapper
+cookbook to setup nginx as a proxy with ssl enabled.
 
 * Opscode Community Site: http://community.opscode.com/cookbooks/rocketchat
 * Source Code: http://github.com/gregf/chef-rocketchat
