@@ -1,0 +1,17 @@
+---
+driver_plugin: digitalocean
+driver_config:
+  size: 512mb
+  require_chef_omnibus: latest
+
+platforms:
+- name: debian-8.2
+  provisioner:
+    sudo: false
+  busser:
+    sudo: false
+suites:
+  - name: default
+    run_list:
+    - recipe[rocketchat]
+    attributes:

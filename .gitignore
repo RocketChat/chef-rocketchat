@@ -1,0 +1,9 @@
+.kitchen/
+.kitchen.local.yml
+*.lock
+tmp/
+.deps
+Vagrantfile
+.bundle
+bin
+vendor
