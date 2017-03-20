@@ -24,7 +24,3 @@ end
 describe process('node main.js') do
   its(:user) { should eq 'rocketchat' }
 end
-
-describe port(3000) do
-  it { should be_listening }
-end

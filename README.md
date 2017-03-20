@@ -1,6 +1,8 @@
 # Rocket.Chat
-[![Build Status](https://travis-ci.org/gregf/chef-rocketchat.svg?branch=master)](https://travis-ci.org/gregf/chef-rocketchat)
-[![Cookbook Version](https://img.shields.io/cookbook/v/rocketchat.svg)](https://supermarket.chef.io/cookbooks/rocketchat)
+[![Build Status](https://travis-ci.org/jjasghar/chef-rocketchat.svg?branch=master)](https://travis-ci.org/jjasghar/chef-rocketchat)
+[![Cookbook Version](https://img.shields.io/cookbook/v/rocketchat.svg)](https://supermarket.chef.io/cookbooksa/rocketchat)
+
+![](https://rocket.chat/images/logo/logo-dark.svg?v3)
 
 ## Description
 
@@ -9,7 +11,7 @@ intended only to install the Rocket.Chat server. You'll want to use a wrapper
 cookbook to setup nginx as a proxy with ssl enabled.
 
 * Opscode Community Site: http://community.opscode.com/cookbooks/rocketchat
-* Source Code: http://github.com/gregf/chef-rocketchat
+* Source Code: http://github.com/jjasghar/chef-rocketchat
 
 ## Requirements
 
@@ -40,8 +42,11 @@ on attributes you have specified.
 ## License
 
 Author: Greg Fitzgerald <greg@gregf.org>
+Author: JJ Asghar <jj@chef.io>
+
 
 Copyright 2016, Greg Fitzgerald.
+Copyright 2017, JJ Asghar
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
