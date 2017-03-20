@@ -3,6 +3,7 @@
 # Recipe:: default
 #
 # Copyright 2016, Greg Fitzgerald
+# Copyright 2017, JJ Asghar
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -42,7 +43,17 @@ node.override['mongodb']['config']['bind_ip'] = 'localhost'
 include_recipe 'mongodb::10gen_repo'
 include_recipe 'mongodb::default'
 
-include_recipe 'nodejs::npm'
+bash "install node" do
+  user "root"
+  cwd "/tmp"
+  creates "maybe"
+  code <<-EOH
+  STATUS=0
+    curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -   || STATUS=1
+    apt-get install -y nodejs   || STATUS=1
+  exit $STATUS
+  EOH
+end
 
 remote_file "#{Chef::Config['file_cache_path']}/#{tar_name}" do
   source node['rocketchat']['url']
@@ -82,6 +93,10 @@ directory node['rocketchat']['install_dir'] do
   action :create
 end
 
+package ['build-essential','g++'] do
+  action :install
+end
+
 execute 'mv bundle dir' do
   command "cp -a #{Chef::Config['file_cache_path']}/rocketchat/bundle/* #{node['rocketchat']['install_dir']}"
 end
@@ -89,6 +104,13 @@ end
 execute 'npm install' do
   command 'npm install'
   cwd "#{node['rocketchat']['install_dir']}/programs/server"
+end
+
+template "/srv/rocketchat/.node_version.txt" do
+  source "node_version.erb"
+  owner "rocketchat"
+  group "rocketchat"
+  mode "0644"
 end
 
 include_recipe 'runit'
