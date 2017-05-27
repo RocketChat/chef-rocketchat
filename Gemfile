@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 group :lint do
-  gem 'foodcritic'
   gem 'cookstyle'
+  gem 'foodcritic'
   gem 'rainbow'
 end
 
@@ -16,9 +16,9 @@ group :kitchen_common do
 end
 
 group :development do
+  gem 'github_changelog_generator'
+  gem 'kitchen-digitalocean'
+  gem 'kitchen-dokken'
   gem 'rake'
   gem 'stove'
-  gem 'github_changelog_generator'
-  gem 'kitchen-dokken'
-  gem 'kitchen-digitalocean'
 end
