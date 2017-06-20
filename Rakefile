@@ -10,7 +10,9 @@ Stove::RakeTask.new
 # Style tests. Rubocop and Foodcritic
 namespace :style do
   desc 'Run Ruby style checks'
-  RuboCop::RakeTask.new(:ruby)
+  RuboCop::RakeTask.new(:ruby) do |t|
+    t.options = ['-D']
+  end
 
   desc 'Run Chef style checks'
   FoodCritic::Rake::LintTask.new(:chef) do |t|
@@ -43,4 +45,4 @@ desc 'Run all tests on Travis'
 task travis: %w(style spec)
 
 # Default
-task default: ['style', 'spec']
+task default: %w(style spec)

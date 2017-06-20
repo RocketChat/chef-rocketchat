@@ -43,10 +43,10 @@ node.override['mongodb']['config']['bind_ip'] = 'localhost'
 include_recipe 'mongodb::10gen_repo'
 include_recipe 'mongodb::default'
 
-bash "install node" do
-  user "root"
-  cwd "/tmp"
-  creates "maybe"
+bash 'install node' do
+  user 'root'
+  cwd '/tmp'
+  creates 'maybe'
   code <<-EOH
   STATUS=0
     curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -   || STATUS=1
@@ -60,21 +60,21 @@ remote_file "#{Chef::Config['file_cache_path']}/#{tar_name}" do
   checksum node['rocketchat']['checksum']
   owner node['rocketchat']['user']
   group node['rocketchat']['group']
-  mode 0644
+  mode '0644'
   action :create_if_missing
 end
 
 directory node['rocketchat']['install_dir'] do
   owner node['rocketchat']['user']
   group node['rocketchat']['group']
-  mode 0755
+  mode '0755'
   action :create
 end
 
 directory "#{Chef::Config['file_cache_path']}/rocketchat" do
   owner node['rocketchat']['user']
   group node['rocketchat']['group']
-  mode 0755
+  mode '0755'
   action :create
 end
 
@@ -89,11 +89,11 @@ directory node['rocketchat']['install_dir'] do
   recursive true
   owner node['rocketchat']['user']
   group node['rocketchat']['group']
-  mode 0755
+  mode '0755'
   action :create
 end
 
-package ['build-essential','g++'] do
+package ['build-essential', 'g++'] do
   action :install
 end
 
@@ -106,11 +106,11 @@ execute 'npm install' do
   cwd "#{node['rocketchat']['install_dir']}/programs/server"
 end
 
-template "/srv/rocketchat/.node_version.txt" do
-  source "node_version.erb"
-  owner "rocketchat"
-  group "rocketchat"
-  mode "0644"
+template '/srv/rocketchat/.node_version.txt' do
+  source 'node_version.erb'
+  owner 'rocketchat'
+  group 'rocketchat'
+  mode '0644'
 end
 
 include_recipe 'runit'

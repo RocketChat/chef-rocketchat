@@ -7,6 +7,9 @@ AllCops:
 
 AlignParameters:
   Enabled: false
+BlockLength:
+  Exclude:
+    - spec/unit/attributes_spec.rb
 Encoding:
   Enabled: false
 HashSyntax:
