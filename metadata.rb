@@ -3,7 +3,7 @@ maintainer_email  'cookbook@rocket.chat'
 license           'Apache 2.0'
 description       'Installs/Configures Rocket.Chat'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           '0.2.0'
+version           '0.3.0'
 name              'rocketchat'
 issues_url        'https://github.com/RocketChat/chef-rocketchat/issues'
 source_url        'https://github.com/RocketChat/chef-rocketchat/'

@@ -1,10 +1,19 @@
 # Change Log
 
-## [v0.2.0](https://github.com/jjasghar/chef-rocketchat/tree/v0.2.0)
+## [v0.3.0](https://github.com/RocketChat/chef-rocketchat/tree/v0.3.0) (2017-06-21)
+
+[Full Changelog](https://github.com/RocketChat/chef-rocketchat/compare/v0.2.0...v0.3.0)
 
 **Merged pull requests:**
 
-- Updated to 0.53.0 [\#1](https://github.com/jjasghar/chef-rocketchat/pull/1) ([jjasghar](https://github.com/jjasghar))
+- Fixes for Ubuntu 14.04 - fix for installing 0.53.0 [\#4](https://github.com/RocketChat/chef-rocketchat/pull/4) ([maraaaa](https://github.com/maraaaa))
+- Converted from jjasghar to rocketchat [\#3](https://github.com/RocketChat/chef-rocketchat/pull/3) ([jjasghar](https://github.com/jjasghar))
+- updated for docker travis [\#2](https://github.com/RocketChat/chef-rocketchat/pull/2) ([jjasghar](https://github.com/jjasghar))
+
+## [v0.2.0](https://github.com/RocketChat/chef-rocketchat/tree/v0.2.0) (2017-03-20)
+**Merged pull requests:**
+
+- Updated to 0.53.0 [\#1](https://github.com/RocketChat/chef-rocketchat/pull/1) ([jjasghar](https://github.com/jjasghar))
 
 
 
