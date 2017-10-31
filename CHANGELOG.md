@@ -1,7 +1,18 @@
 # Change Log
 
-## [v0.3.0](https://github.com/RocketChat/chef-rocketchat/tree/v0.3.0) (2017-06-21)
+## [v0.3.1](https://github.com/RocketChat/chef-rocketchat/tree/v0.3.1)
 
+[Full Changelog](https://github.com/RocketChat/chef-rocketchat/compare/v0.3.0...v0.3.1)
+
+**Closed issues:**
+
+- Download link Chaged [\#5](https://github.com/RocketChat/chef-rocketchat/issues/5)
+
+**Merged pull requests:**
+
+- Fix Download Url [\#6](https://github.com/RocketChat/chef-rocketchat/pull/6) ([geekgonecrazy](https://github.com/geekgonecrazy))
+
+## [v0.3.0](https://github.com/RocketChat/chef-rocketchat/tree/v0.3.0) (2017-06-21)
 [Full Changelog](https://github.com/RocketChat/chef-rocketchat/compare/v0.2.0...v0.3.0)
 
 **Merged pull requests:**
